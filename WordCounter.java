@@ -10,14 +10,14 @@ import java.util.HashSet;
 public class WordCounter
 {
     // Associate each word with a count.
-    private final HashMap<String, Integer> counts;
+    private HashMap<String, Integer> wordCounts;
 
     /**
      * Create a WordCounter
      */
     public WordCounter()
     {
-        counts = new HashMap<>();
+        wordCounts = new HashMap<>();
 
     }
     
@@ -25,12 +25,19 @@ public class WordCounter
      * Update the usage count of all words in input.
      * @param input A set of words entered by the user.
      */
-    public void addWords(HashSet<String> input)
+    public void addWords(HashSet<String> words)
     {
-        for(String word : input) {
-            int counter = counts.getOrDefault(word, 0);
-            counts.put(word, counter + 1);
+        for(String word : words) {
+            int count = wordCounts.getOrDefault(word, 0);
+            wordCounts.put(word, count + 1);
         }
     }
     
+    public void printWordCounts()
+    {
+        System.out.println("Word usage counts");
+        for(String word: wordCounts.keySet()){
+            System.out.println(word + ":" + wordCounts.get(word));
+        }
+    }
 }
