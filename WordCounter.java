@@ -7,8 +7,7 @@ import java.util.HashSet;
  * @author  Michael Kölling and David J. Barnes
  * @version 7.0
  */
-public class WordCounter
-{
+public class WordCounter{
     // Associate each word with a count.
     private HashMap<String, Integer> wordCounts;
 
@@ -36,7 +35,8 @@ public class WordCounter
     public void printWordCounts()
     {
         System.out.println("Word usage counts");
-        for(String word: wordCounts.keySet()){
+        for(String word: wordCounts.keySet())
+        {
             System.out.println(word + ":" + wordCounts.get(word));
         }
     }

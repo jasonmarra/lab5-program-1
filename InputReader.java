@@ -9,8 +9,7 @@ import java.util.Scanner;
  * @author  Michael Kölling and David J. Barnes
  * @version 7.3
  */
-public class InputReader
-{
+public class InputReader{
     private Scanner reader;
 
     /**

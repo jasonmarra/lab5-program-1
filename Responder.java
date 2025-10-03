@@ -18,8 +18,7 @@ import java.util.Random;
  * @author  Michael Kölling and David J. Barnes
  * @version 7.3
  */
-public class Responder
-{
+public class Responder{
     // Used to map key words to responses.
     private HashMap<String, String> responseMap;
     // Default responses to use if we don't recognise a word.
@@ -172,5 +171,10 @@ public class Responder
         // The number will be between 0 (inclusive) and the size of the list (exclusive).
         int index = randomGenerator.nextInt(defaultResponses.size());
         return defaultResponses.get(index);
+    }
+    
+    public HashMap<String, String> getResponseMap()
+    {
+     return responseMap;
     }
 }

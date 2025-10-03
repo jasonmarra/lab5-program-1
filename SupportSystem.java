@@ -13,8 +13,7 @@ import java.util.HashSet;
  * @author  Michael Kölling and David J. Barnes
  * @version 7.4
  */
-public class SupportSystem
-{
+public class SupportSystem{
     private InputReader reader;
     private Responder responder;
     private WordCounter counter;
